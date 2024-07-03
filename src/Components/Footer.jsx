@@ -1,7 +1,8 @@
 import React from 'react';
 import './Footer.css';
-import { ReactComponent as LogoIcon } from '../Icons/GrosMarket.svg';
 import { ReactComponent as AnotherIcon } from '../Icons/Social.svg';
+import logo from '../Icons/logo.png'; // Regular import for PNG image
+
 
 const Footer = () => {
     return (
@@ -26,7 +27,8 @@ const Footer = () => {
                 <a href="#services">Services</a>
             </div>
             <div className="column">
-                <LogoIcon className="footer-logo" />
+            <img src={logo} alt="Logo" className="footer-logo" />
+
                 <AnotherIcon className="footer-icon" />
             </div>
         </div>

@@ -1,27 +1,43 @@
-import React , {useState} from 'react';
-import { ReactComponent as SearchIcon } from '../Icons/Search.svg';
-import './SearchBar.css';
+import React, { useState } from 'react';
+import './Searchbar.css';
 
-const SearchBar = () => {
+const Searchbar = () => {
+    const [activeButton, setActiveButton] = useState('');
 
-    const [search, setSearch] = useState('');
-    const handleSearchChange = (e) => {
-        setSearch(e.target.value);
+    const handleButtonClick = (buttonName) => {
+        setActiveButton(buttonName);
     };
 
     return (
-        <div className="SearchBar">
-            <input
-                type="text"
-                placeholder="Rechercher un article"
-                value={search}
-                onChange={handleSearchChange}
-            />
-            <div className="DivIcon">
-                <SearchIcon/>
+        <div>
+            <div className='SearchBox'>  
+                <input id="textInput" placeholder="Entrer le mot clé" type="text" />
+                <button 
+                    className={`Bouton-Rechercher ${activeButton === 'rechercher' ? 'active' : ''}`}
+                    onClick={() => handleButtonClick('rechercher')}
+                >
+                    Rechercher
+                </button>  
+            </div>
+            <div className='filtre'>
+                <button 
+                    className={`Bouton-filtre1 ${activeButton === 'filtre1' ? 'active' : ''}`}
+                    onClick={() => handleButtonClick('filtre1')}
+                >
+                    Catégorie
+                </button>
+                <button 
+                    className={`Bouton-filtre2 ${activeButton === 'filtre2' ? 'active' : ''}`}
+                    onClick={() => handleButtonClick('filtre2')}
+                >
+                    Prix
+                </button>
             </div>
         </div>
     );
 }
 
-export default SearchBar;
+export default Searchbar;
+
+
+

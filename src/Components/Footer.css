@@ -1,11 +1,11 @@
-/* src/components/Footer.css */
 .footer {
     display: flex;
     justify-content: space-around;
     background-color: #243645; 
     padding: 20px;
+    height: 220px;
     color: white;
-    height: 250px;
+    margin-top:100px;
 }
 
 .column {
@@ -33,6 +33,52 @@
 
 .footer-logo, .footer-icon {
     margin: 20px;
-    
-    
 }
+@media (max-width: 768px) {
+    .footer {
+      flex-direction: column; /* Stack columns vertically */
+      justify-content: center; /* Center content vertically */
+      align-items: center; /* Center content horizontally */
+      height: auto; /* Remove fixed height for better responsiveness */
+    }
+  
+    .column {
+      margin-bottom: 20px; /* Add spacing between columns */
+      align-items: center; /* Center content within columns */
+      text-align: center; /* Center text for better readability */
+    }
+  
+    .footer-logo,
+    .footer-icon {
+      margin: 10px 0; /* Adjust margin for smaller screens */
+    }
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align left on larger screens */
+    width: 25%; /* Distribute columns evenly on larger screens */
+  }
+  
+  .column h2 {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .column a {
+    color: gray;
+    margin: 5px 0;
+    text-decoration: none;
+    transition: color 0.3s, text-decoration 0.3s;
+  }
+  
+  .column a:hover {
+    color: #FFC300; /* Hover color */
+    text-decoration: underline;
+  }
+  
+  .footer-logo,
+  .footer-icon {
+    margin: 20px;
+  }

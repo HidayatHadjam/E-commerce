@@ -1,52 +1,65 @@
-.SearchBar {
-    width: auto;
+.SearchBox {
     display: flex;
-    align-items: center ;
     justify-content: center;
-    overflow-y: hidden;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.Bouton-Rechercher {
+    background-color: #FFC300;
+    width: 100px;
+    padding: 8px;
+    border-radius: 6px;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+}
+
+.Bouton-Rechercher:hover {
+    background-color: #ffcc33;
+    color: #333;
+    border: 2px solid #333; /* Ajoute une bordure lors du survol */
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
 }
 
 input {
-    height: 45px;
-    width: 50vw;
-    border-bottom-left-radius: 5px;
-    border-top-left-radius: 5px;
-    padding-left: 15px;
+    width: 500px;
+    padding: 8px;
+    background-color: #dfdbdb;
+    margin: 8px;
+    border-radius: 6px;
+    box-shadow: none;
+    border: none;
 }
 
-.DivIcon {
+.Bouton-filtre1,
+.Bouton-filtre2 {
+    background-color: #dfdbdb;
+    width: 100px;
+    padding: 4px;
+    border-radius: 6px;
+    margin: 8px;
+    box-shadow: none;
+    border: none;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 70px;
-    background-color: #0923A9;
-    height: 50px;
-    border: 1px black;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
 }
 
-
-@media (max-width: 768px) {
-
-    .DivIcon {
-        width: 50px;
-        height: 45px;
-    }
-
-    input {
-        height: 40px;
-        width: 50vw;
-        padding-left: 10px;
-    }
-
-  }
-
-@media (max-width: 392px) {
+.Bouton-filtre1:hover,
+.Bouton-filtre2:hover {
+    background-color: #FFC300;
    
-    input {
-        width: 60vw;
-    }
+    transition: background-color 0.3s ease, border 0.3s ease;
+}
 
-  }
+.filtre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: none;
+}
+
+/* Classe active pour les boutons */
+.active {
+    background-color: #FFC300; /* Couleur de fond jaune lorsqu'il est actif */
+    border: 0px solid #333; /* Bordure persistante */
+}

@@ -1,21 +1,26 @@
-import React, {useState} from 'react';
-import './Search.css';
+import React from 'react';
 import NavBar from '../Components/NavBar';
-import SearchBar from '../Components/SearchBar';
-import { ReactComponent as Logo2 } from '../Icons/Logo2.svg';
+import Welcome from '../Components/Welcome';
+import Searchbar from '../Components/Searchbar';
+import Product from '../Components/Product';
+import Scroll from '../Components/Scroll';
+import Footer from '../Components/Footer';
 
-const SearchPage = () => {
 
+
+
+const Aceuilpage = () => {
     return (
-        <div>
-            <NavBar/>
-            <div className="SearchContainer">
-                <Logo2 className='Logo2'/>
-                <SearchBar/>
-            </div>
+        <div className="App">
+               <NavBar/>
+               <Welcome/>
+               <Searchbar/>
+               <Product/>
+               <Scroll/>
+               <Footer/>
+            
         </div>
-
     );
 }
 
-export default SearchPage;
+export default Aceuilpage ;

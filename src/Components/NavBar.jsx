@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; 
 import './NavBar.css';
-import logoImage from '../Icons/GrosMarket.svg';
-import cartIcon from '../Icons/Panier.svg';
+import logoImage from '../Icons/logo.png'; 
+import cartIcon from '../Icons/panier.png'; 
+
 
 const Navbar = () => {
     return (
@@ -22,9 +22,7 @@ const Navbar = () => {
                 </li>
                 <li className="nav-item">
                     <a href="/cart" className="nav-link">
-                         <Link to="/ajouter" className="nav-link">
                         <img src={cartIcon} alt="Panier" className="cart-icon" />
-                    </Link>
                         
                     </a>
                 </li>
